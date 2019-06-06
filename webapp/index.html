@@ -6,16 +6,17 @@
         <title>MVC App</title>
         <script id="sap-ui-bootstrap"
           	src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
-          data-sap-ui-libs="sap.m"
-          data-sap-ui-theme="sap_bluecrystal"
-          data-sap-ui-compatVersion="edge"
-          data-sap-ui-resourceroots='{"
-			opensap.myapp": "./"}'  ??????????
-          >
-        
+          	data-sap-ui-libs="sap.m"
+        	data-sap-ui-theme="sap_goldreflection"
+		
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-resourceroots='{"sapui5.demo.mvcapp": "./webapp/"}'
+			>
         </script>
         <script>
 			        // application data
+			       
 			var oData = {
 			  "CountSuppliers": "2",
 			  "Suppliers": [{
@@ -43,7 +44,7 @@
 			  ]
 			};
 			// model creation and setting data
-			var oModel = new sap.ui.model.json.JSONModel();
+			var oModel = sap.ui.model.json.JSONModel();
 			oModel.setData(oData);
 			// setting the model to the core
 			// so that it’s available in the whole application
